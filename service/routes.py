@@ -126,6 +126,7 @@ def update_counters(name):
             return jsonify(code=404, error=f"Counter {name} does not exist"), 404
 
         count = counter.increment()
+        a = 1
     except DatabaseConnectionError as err:
         abort(status.HTTP_503_SERVICE_UNAVAILABLE, err)
 
